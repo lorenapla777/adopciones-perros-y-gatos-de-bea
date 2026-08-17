@@ -3,30 +3,31 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Un hogar urgente para ellos — Adopción</title>
-<meta name="description" content="Seis perros y tres gatos, compañeros de vida de Bea, necesitan una familia con urgencia. Conocelos y ayudanos a encontrarles un hogar.">
-<meta property="og:title" content="Un hogar urgente para ellos">
-<meta property="og:description" content="Seis perros y tres gatos necesitan una familia con urgencia. Conocelos acá.">
+<title>Los 9 de Bea — Adopción urgente</title>
+<meta name="description" content="Bea cuidó a muchos. Hoy necesitamos cuidar a los suyos. Sus 9 compañeros buscan un hogar con urgencia.">
+<meta property="og:title" content="Los 9 de Bea">
+<meta property="og:description" content="Bea cuidó a muchos. Hoy necesitamos cuidar a los suyos.">
 <!-- Cuando tengas una foto de portada, descomentá esta línea y poné la URL pública
      de la imagen — así se va a ver una foto en la vista previa cuando alguien
      comparta el link por WhatsApp:
 <meta property="og:image" content="URL-DE-LA-FOTO"> -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 
   /* ============================================================
      CONFIGURACIÓN RÁPIDA — editá acá los datos reales
      ============================================================ */
   :root{
-    --bg: #FBF6EC;
-    --card: #F1E9D8;
-    --ink: #2B2620;
-    --ink-soft: #55503f;
-    --pine: #33544A;
-    --pine-dark: #223A33;
-    --mustard: #DE9A3C;
-    --line: #DCCFAF;
+    --bg: #F8E0C8;
+    --card: #FFFFFF;
+    --ink: #411359;
+    --ink-soft: #6B4E73;
+    --purple: #411359;
+    --purple-dark: #2C0D40;
+    --coral: #F88F8F;
+    --coral-dark: #E67373;
+    --line: #EAD3AE;
     --radius: 18px;
   }
 
@@ -34,13 +35,13 @@
   html{ scroll-behavior: smooth; }
   body{
     margin:0;
-    background: var(--bg);
+    background-color: var(--bg);
     color: var(--ink);
-    font-family: 'Inter', sans-serif;
+    font-family: 'Hanken Grotesk', sans-serif;
     line-height: 1.5;
   }
   h1,h2,h3, .display{
-    font-family: 'Fraunces', serif;
+    font-family: 'Fredoka', sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
     margin: 0;
@@ -58,16 +59,16 @@
     display:flex; align-items:center; justify-content:space-between;
   }
   .brand{
-    font-family:'Fraunces', serif; font-weight:700; font-size:1.15rem;
+    font-family:'Fredoka', sans-serif; font-weight:600; font-size:1.15rem;
     display:flex; align-items:center; gap:8px;
   }
-  .brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--mustard); display:inline-block; }
+  .brand .dot{ width:9px; height:9px; border-radius:50%; background:var(--coral); display:inline-block; }
 
   /* ---------- Hero ---------- */
   .hero{ padding: 64px 0 40px; }
   .hero .eyebrow{
     font-size: .8rem; text-transform: uppercase; letter-spacing: .12em;
-    color: var(--pine); font-weight:600; margin-bottom: 14px;
+    color: var(--coral-dark); font-weight:700; margin-bottom: 14px;
   }
   .hero h1{
     font-size: clamp(1.9rem, 4.6vw, 2.9rem);
@@ -83,7 +84,7 @@
   .hero .lead p{ margin: 0 0 14px; }
   .hero .lead p.closing{
     margin-top: 6px;
-    color: var(--pine);
+    color: var(--coral-dark);
     font-weight: 600;
     font-style: italic;
   }
@@ -101,10 +102,10 @@
     border: 1px solid transparent;
     cursor:pointer;
   }
-  .btn-primary{ background: var(--pine); color: #fff; }
-  .btn-primary:hover{ background: var(--pine-dark); }
+  .btn-primary{ background: var(--purple); color: #fff; }
+  .btn-primary:hover{ background: var(--purple-dark); }
   .btn-ghost{ background: transparent; border-color: var(--line); color: var(--ink); }
-  .btn-ghost:hover{ border-color: var(--pine); }
+  .btn-ghost:hover{ border-color: var(--purple); }
   .btn svg{ width:18px; height:18px; flex-shrink:0; }
 
   /* ---------- Video ---------- */
@@ -132,7 +133,7 @@
     padding: 8px 16px; border-radius: 999px; border:1px solid var(--line);
     background: transparent; font-size: .85rem; font-weight:600; cursor:pointer; color: var(--ink-soft);
   }
-  .filter.active{ background: var(--pine); border-color: var(--pine); color:#fff; }
+  .filter.active{ background: var(--purple); border-color: var(--purple); color:#fff; }
 
   .grid{
     display:grid;
@@ -140,7 +141,7 @@
     gap: 26px 20px;
   }
 
-  /* --- signature element: the "hang tag" card --- */
+  /* --- tarjeta de cada animal: lisa, en color sólido --- */
   .tag{
     position:relative;
     background: var(--card);
@@ -149,28 +150,10 @@
     border: 1px solid var(--line);
     margin-top: 18px;
   }
-  .tag::before{ /* the string loop */
-    content:"";
-    position:absolute; top:-14px; left:50%; transform:translateX(-50%);
-    width: 26px; height: 20px;
-    border: 3px solid var(--ink-soft);
-    border-bottom: none;
-    border-radius: 20px 20px 0 0;
-    opacity:.55;
-  }
-  .tag::after{ /* the punched hole */
-    content:"";
-    position:absolute; top:-4px; left:50%; transform:translateX(-50%);
-    width: 10px; height: 10px;
-    background: var(--bg);
-    border-radius:50%;
-    border: 2px solid var(--ink-soft);
-    opacity:.55;
-  }
   .tag .ribbon{
     display:inline-block;
     font-size: .68rem; font-weight:700; text-transform:uppercase; letter-spacing:.08em;
-    background: var(--mustard); color: #2b2000;
+    background: var(--coral); color: var(--purple-dark);
     padding: 4px 10px; border-radius: 999px;
     margin-bottom: 10px;
   }
@@ -178,36 +161,21 @@
   .top-row .ribbon{ margin-bottom:0; }
   .pareja-badge{
     display:inline-flex; align-items:center; gap:4px;
-    font-size:.72rem; font-weight:600; color: var(--pine);
+    font-size:.72rem; font-weight:600; color: var(--coral-dark);
     background: #fff; border:1px solid var(--line);
     padding: 3px 10px; border-radius: 999px;
     text-decoration:none;
   }
   .photo{
-    position: relative;
     aspect-ratio: 1/1;
     border-radius: 12px;
-    background: linear-gradient(135deg, #e4d8bd, #d8cba9);
+    background: linear-gradient(135deg, #F8E0C8, #F6C6C6);
     display:flex; align-items:center; justify-content:center;
     overflow:hidden;
     margin-bottom: 12px;
   }
-  .photo svg{ position:relative; z-index:1; width:38%; height:38%; opacity:.35; }
-  /* Capa de fondo: la misma foto, desenfocada, agrandada un poco para
-     que el desenfoque de los bordes no se note. Rellena el cuadro. */
-  .photo-bg{
-    position:absolute; inset:0;
-    background-size:cover; background-position:center;
-    filter: blur(20px) brightness(.85);
-    transform: scale(1.15);
-  }
-  /* Capa de arriba: la foto COMPLETA, sin recortar nada. */
-  .photo-fg{
-    position:relative; z-index:1;
-    width:100%; height:100%;
-    object-fit:contain;
-    display:block;
-  }
+  .photo img{ width:100%; height:100%; object-fit:cover; }
+  .photo svg{ width:38%; height:38%; opacity:.35; }
 
   .tag h3{ font-size: 1.15rem; }
   .tag .meta{ font-size:.85rem; color: var(--ink-soft); margin-top:2px; }
@@ -216,7 +184,7 @@
     margin-top: 14px;
     display:flex;
     font-size:.82rem; font-weight:600;
-    color: var(--pine);
+    color: var(--coral-dark);
     text-decoration:none;
     align-items:center; gap:6px;
   }
@@ -228,7 +196,7 @@
   .detalle{ padding: 12px 0 20px; }
   .volver{
     display:inline-flex; align-items:center; gap:6px;
-    font-size:.88rem; font-weight:600; color: var(--pine);
+    font-size:.88rem; font-weight:600; color: var(--coral-dark);
     text-decoration:none; margin-bottom:26px;
   }
   .detalle-layout{
@@ -236,21 +204,21 @@
     align-items:start;
   }
   .detalle-main-photo{
-    position: relative;
     aspect-ratio: 4/3;
     border-radius: var(--radius);
     overflow:hidden;
-    background: linear-gradient(135deg, #e4d8bd, #d8cba9);
+    background: linear-gradient(135deg, #F8E0C8, #F6C6C6);
     display:flex; align-items:center; justify-content:center;
   }
-  .detalle-main-photo svg{ position:relative; z-index:1; width:30%; height:30%; opacity:.35; }
+  .detalle-main-photo img{ width:100%; height:100%; object-fit:cover; }
+  .detalle-main-photo svg{ width:30%; height:30%; opacity:.35; }
   .detalle-thumbs{ display:flex; gap:10px; margin-top:12px; flex-wrap:wrap; }
   .thumb{
     width:64px; height:64px; border-radius:10px; overflow:hidden;
     border:2px solid transparent; padding:0; cursor:pointer; background: var(--card);
   }
   .thumb img{ width:100%; height:100%; object-fit:cover; display:block; }
-  .thumb.active{ border-color: var(--pine); }
+  .thumb.active{ border-color: var(--coral-dark); }
   .detalle-info h2{ font-size:2rem; margin-bottom:6px; }
   .detalle-info .meta{ font-size:.95rem; color: var(--ink-soft); margin-bottom:16px; }
   .detalle-info .historia-larga{ color: var(--ink-soft); font-size:1rem; line-height:1.65; margin-bottom:24px; white-space:pre-line; }
@@ -262,24 +230,24 @@
   /* ---------- How to help ---------- */
   .help{ padding: 20px 0 60px; }
   .help .box{
-    background: var(--pine); color: #F6F1E4;
+    background: var(--purple); color: #F3E6E6;
     border-radius: var(--radius);
     padding: 36px;
   }
   .help h2{ color:#fff; font-size:1.5rem; }
-  .help p{ color: #d9e2dc; margin-top: 10px; max-width: 60ch; }
+  .help p{ color: #E4D3E8; margin-top: 10px; max-width: 60ch; }
   .steps{ margin-top: 22px; display:grid; grid-template-columns: repeat(auto-fit, minmax(160px,1fr)); gap:18px; }
-  .step{ font-size:.88rem; color:#e8eee9; }
-  .step b{ display:block; color:#fff; font-family:'Fraunces',serif; font-size:1.05rem; margin-bottom:4px; }
+  .step{ font-size:.88rem; color:#EEE0EE; }
+  .step b{ display:block; color:#fff; font-family:'Fredoka',sans-serif; font-size:1.05rem; margin-bottom:4px; }
 
   .share-row{ margin-top: 24px; display:flex; gap:12px; flex-wrap:wrap; }
-  .btn-light{ background:#fff; color: var(--pine-dark); }
-  .btn-light:hover{ background:#eee6d2; }
+  .btn-light{ background: var(--bg); color: var(--purple-dark); }
+  .btn-light:hover{ background:#f2d4b3; }
 
   /* ---------- Footer ---------- */
   footer{ padding: 30px 0 50px; border-top: 1px solid var(--line); }
   footer .wrap{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; font-size:.82rem; color: var(--ink-soft); }
-  footer .credit{ color: var(--pine); font-weight:600; text-decoration:none; }
+  footer .credit{ color: var(--coral-dark); font-weight:600; text-decoration:none; }
   footer .credit:hover{ text-decoration:underline; }
 
   @media (max-width: 560px){
@@ -292,7 +260,7 @@
 
 <header class="top">
   <div class="wrap">
-    <div class="brand"><span class="dot"></span> Un hogar para ellos</div>
+    <div class="brand"><span class="dot"></span> Los 9 de Bea</div>
   </div>
 </header>
 
@@ -393,63 +361,63 @@ const animales = [
     temperamento: "Noble, sereno y muy dulce",
     resumen: "Un viejito buenazo que solamente necesita tranquilidad y cariño.",
     historia: "Chango tiene 13 años y es un verdadero santo. Es un perro muy noble y tranquilo, de esos que disfrutan de la compañía y de una vida sin sobresaltos.\n\nPor su edad está muy delgadito y necesita un hogar amoroso donde pueda descansar, sentirse acompañado y recibir todos los cuidados que merece. Convive bien con los demás perros y también con gatos.\n\nBuscamos para él una familia sensible, dispuesta a abrirle el corazón a un perro mayor y regalarle una etapa llena de calma, comodidad y afecto.",
-    pareja: "", fotos: ["fotos/chango-1.jpg","fotos/chango-2.jpg","fotos/chango-3.jpg","fotos/chango-4.jpg"]
+    pareja: "", fotos: ["fotos/chango-portada.jpg","fotos/chango-1.jpg","fotos/chango-2.jpg","fotos/chango-3.jpg","fotos/chango-4.jpg"]
   },
   {
     nombre: "Simón", especie: "perro", edad: "Más de 10 años",
     temperamento: "Tranquilo, cariñoso y compañero",
     resumen: "El compañero inseparable de Biuty. Buscan un hogar juntos.",
     historia: "Simón es un perro tranquilo, cariñoso y de tamaño mediano a pequeño: pesa menos de 15 kilos.\n\nCreció junto a Biuty y han compartido prácticamente toda su vida. Son compañeros inseparables, por eso buscamos una familia que pueda recibirlos a los dos.\n\nConvive bien con otros perros y también con gatos. Junto a Biuty puede adaptarse muy bien a un hogar sereno, donde ambos puedan continuar acompañándose y recibir el cariño de una nueva familia.",
-    pareja: "Biuty", fotos: ["fotos/simon-1.jpg","fotos/simon-2.jpg","fotos/simon-3.jpg"]
+    pareja: "Biuty", fotos: ["fotos/simon-portada.jpg","fotos/simon-1.jpg","fotos/simon-2.jpg","fotos/simon-3.jpg"]
   },
   {
     nombre: "Biuty", especie: "perro", edad: "Más de 10 años",
     temperamento: "Tranquila, cariñosa y compañera",
     resumen: "La compañera inseparable de Simón. Necesitan seguir juntos.",
     historia: "Biuty es una perrita muy tranquila, cariñosa y de tamaño mediano a pequeño: pesa menos de 15 kilos.\n\nSe crió junto a Simón y entre ellos existe un vínculo de toda una vida. Se acompañan, se buscan y se sienten seguros estando juntos. Por eso necesitan ser adoptados por una misma familia.\n\nConvive bien con otros perros y también con gatos. Buscamos para ambos un hogar tranquilo y cariñoso donde puedan continuar compartiendo su vida.",
-    pareja: "Simón", fotos: ["fotos/biuty-1.jpg","fotos/biuty-2.jpg","fotos/biuty-3.jpg","fotos/biuty-4.jpg"]
+    pareja: "Simón", fotos: ["fotos/biuty-portada.jpg","fotos/biuty-1.jpg","fotos/biuty-2.jpg","fotos/biuty-3.jpg"]
   },
   {
-    nombre: "Renata", especie: "perro", edad: "10 años",
+    nombre: "Gorda", especie: "perro", edad: "10 años",
     temperamento: "Muy tranquila y dulce",
     resumen: "Una compañera serena y dulce que disfruta del afecto.",
-    historia: "Renata tiene 10 años y es una perrita muy tranquila y dulce. Disfruta de la compañía y puede ser una hermosa compañera para una familia que busque una presencia serena y cariñosa.\n\nConvive bien con otros perros y también con gatos. Necesita un hogar donde pueda sentirse protegida, descansar y recibir el afecto al que está acostumbrada.",
-    pareja: "", fotos: ["fotos/renata-1.jpg","fotos/renata-2.jpg","fotos/renata-3.jpg"]
+    historia: "Gorda tiene 10 años y es una perrita muy tranquila y dulce. Disfruta de la compañía y puede ser una hermosa compañera para una familia que busque una presencia serena y cariñosa.\n\nConvive bien con otros perros y también con gatos. Necesita un hogar donde pueda sentirse protegida, descansar y recibir el afecto al que está acostumbrada.",
+    pareja: "", fotos: ["fotos/gorda-portada.jpg","fotos/gorda-1.jpg","fotos/gorda-2.jpg","fotos/gorda-3.jpg"]
   },
   {
     nombre: "Negra", especie: "perro", edad: "3 años",
     temperamento: "Activa, alegre y juguetona",
     resumen: "La más joven de los perros: alegre, activa y con ganas de jugar.",
     historia: "Negra es la más joven del grupo. Es activa, alegre y juguetona, ideal para una familia que disfrute compartir paseos, juegos y momentos de compañía.\n\nConvive bien con otros perros y también con gatos. Buscamos para ella un hogar donde pueda continuar desplegando su energía y recibir el cariño y la atención que necesita.",
-    pareja: "", fotos: ["fotos/negra-1.jpg","fotos/negra-2.jpg","fotos/negra-3.jpg","fotos/negra-4.jpg"]
+    pareja: "", fotos: ["fotos/negra-portada.jpg","fotos/negra-1.jpg","fotos/negra-2.jpg","fotos/negra-3.jpg"]
   },
   {
     nombre: "Kuki", especie: "perro", edad: "10 años",
     temperamento: "Muy cariñoso, compañero y pegote",
     resumen: "Pequeño, cariñoso y siempre listo para estar cerca.",
     historia: "Kuki tiene 10 años, pesa aproximadamente 8 kilos y es un perro pequeño y muy cariñoso.\n\nEs un verdadero pegote: disfruta estar cerca de las personas, recibir mimos y acompañar. Puede ser un compañero ideal para alguien que quiera compartir su vida cotidiana con un perro afectuoso y presente.\n\nConvive bien con otros perros y también con gatos. Busca un hogar donde pueda sentirse querido y acompañado.",
-    pareja: "", fotos: ["fotos/kuki-1.jpg","fotos/kuki-2.jpg","fotos/kuki-3.jpg"]
+    pareja: "", fotos: ["fotos/kuki-portada.jpg","fotos/kuki-1.jpg","fotos/kuki-2.jpg","fotos/kuki-3.jpg"]
   },
   {
     nombre: "Zuka", especie: "gato", edad: "2 años",
     temperamento: "Muy cariñoso, compañero y pegote",
     resumen: "Cariñoso e inseparable de su hermana Prana. Buscan un hogar juntos.",
     historia: "Zuka tiene 2 años y es un gato muy compañero, cariñoso y pegote. Disfruta del contacto con las personas y de estar cerca de quienes quiere.\n\nEs hermano de Prana y ambos tienen un vínculo muy profundo. Son inseparables, por eso buscamos una familia que pueda recibirlos juntos.\n\nEstá acostumbrado a convivir con perros y con otros gatos.\n\nZuka todavía no está castrado.",
-    pareja: "Prana", fotos: ["fotos/zuka-1.jpg","fotos/zuka-2.jpg"]
+    pareja: "Prana", fotos: ["fotos/zuka-portada.jpg","fotos/zuka-1.jpg","fotos/zuka-2.jpg"]
   },
   {
     nombre: "Prana", especie: "gato", edad: "2 años",
     temperamento: "Juguetona, cariñosa y compañera",
     resumen: "Dulce y juguetona, siempre junto a su hermano Zuka.",
     historia: "Prana tiene 2 años y es una gata juguetona, cariñosa y muy compañera.\n\nEs hermana de Zuka y han crecido juntos. Se acompañan y forman una pareja inseparable, por eso buscamos para ellos un mismo hogar.\n\nPrana está castrada y acostumbrada a convivir tanto con gatos como con perros. Junto a Zuka puede llenar una casa de compañía, ternura y momentos de juego.",
-    pareja: "Zuka", fotos: ["fotos/prana-1.jpg","fotos/prana-2.jpg","fotos/prana-3.jpg"]
+    pareja: "Zuka", fotos: ["fotos/prana-portada.jpg","fotos/prana-1.jpg","fotos/prana-2.jpg","fotos/prana-3.jpg"]
   },
   {
-    nombre: "Shanti", especie: "gato", edad: "3 años",
+    nombre: "Nama", especie: "gato", edad: "7 años",
     temperamento: "Muy tranquila",
-    resumen: "Una gatita joven y serena que busca un hogar donde sentirse segura.",
-    historia: "Shanti tiene 3 años y es una gata muy tranquila. Está castrada y acostumbrada a convivir con perros y con otros gatos.\n\nPuede ser una hermosa compañera para una persona o familia que busque una gata joven, serena y de carácter apacible. Necesita un hogar donde pueda adaptarse a su ritmo y sentirse cuidada y querida.",
-    pareja: "", fotos: ["fotos/shanti-1.jpg","fotos/shanti-2.jpg","fotos/shanti-3.jpg"]
+    resumen: "Una gata serena que busca un hogar donde sentirse segura.",
+    historia: "Nama tiene 7 años y es una gata muy tranquila. Está castrada y acostumbrada a convivir con perros y con otros gatos.\n\nPuede ser una hermosa compañera para una persona o familia que busque una gata serena y de carácter apacible. Necesita un hogar donde pueda adaptarse a su ritmo y sentirse cuidada y querida.",
+    pareja: "", fotos: ["fotos/nama-portada.jpg","fotos/nama-1.jpg","fotos/nama-2.jpg","fotos/nama-3.jpg"]
   },
 ];
 
@@ -560,13 +528,12 @@ function whatsappLink(nombre){
   return waUrl(CONTACTOS[0].numero, MENSAJE_INDIVIDUAL.replace('NOMBRE', nombre));
 }
 
-// Arma las dos capas de una foto: fondo desenfocado (llena el cuadro)
-// + la foto completa arriba, sin recortar nada. Si no hay foto, muestra
-// el ícono de mascota como marcador.
+// Arma el <img> de una foto con recorte limpio (relleno automático,
+// centrado). Si no hay foto, muestra el ícono de mascota como marcador.
 function capasFoto(src, alt, idImg){
   if(!src) return pawIcon;
   const idAttr = idImg ? `id="${idImg}"` : '';
-  return `<div class="photo-bg" style="background-image:url('${src}')"></div><img class="photo-fg" ${idAttr} src="${src}" alt="${alt}">`;
+  return `<img ${idAttr} src="${src}" alt="${alt}">`;
 }
 
 function render(list){
@@ -626,11 +593,8 @@ function renderDetail(a){
     btn.addEventListener('click', () => {
       document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
       btn.classList.add('active');
-      const src = btn.dataset.src;
       const img = document.getElementById('detalleMainImg');
-      const bg = document.getElementById('detalleMainPhoto').querySelector('.photo-bg');
-      if(img) img.src = src;
-      if(bg) bg.style.backgroundImage = `url('${src}')`;
+      if(img) img.src = btn.dataset.src;
     });
   });
 }
